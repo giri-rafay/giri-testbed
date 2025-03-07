@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     rafay.dev/description: ""
+  labels:
+    CostCenter: k8s
+    owner: giri
   name: trest1
   project: giri
 spec:
