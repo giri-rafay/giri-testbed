@@ -5,6 +5,11 @@ metadata:
   project: giri
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/xwing-app/xwing-app.yaml
     type: Yaml
   namespace: workload-ns
+  placement:
+    selector: rafay.dev/clusterName=giri-tb-test
+  version: xwing-app-v1-202503070838550000
