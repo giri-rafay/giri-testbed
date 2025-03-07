@@ -12,3 +12,4 @@ spec:
   namespace: workload-ns
   placement:
     selector: rafay.dev/clusterName=giri-tb-test
+  version: xwing-app-v2-202503071014140000
