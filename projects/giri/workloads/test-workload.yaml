@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-workload
+  project: giri
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: trest1
