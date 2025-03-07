@@ -5,6 +5,13 @@ metadata:
   project: giri
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/ns-workload/consul-10.2.4.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
     type: Helm
   namespace: unmanaged
+  placement:
+    selector: rafay.dev/clusterName=giri-tb-test
