@@ -13,7 +13,3 @@ spec:
       maxHistory: 10
       timeout: 5m0s
     type: Helm
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
