@@ -1,0 +1,13 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"CostCenter":"k8s","owner":"giri"},"name":"unmanaged"}}
+  labels:
+    CostCenter: k8s
+    kubernetes.io/metadata.name: unmanaged
+    owner: giri
+  name: unmanaged
+  project: giri
+spec: {}
