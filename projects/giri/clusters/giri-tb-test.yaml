@@ -5,7 +5,8 @@ metadata:
   project: giri
 spec:
   blueprintConfig:
-    name: default-aks
+    name: custom
+    version: v1
   cloudCredentials: giri-aks
   config:
     kind: aksClusterConfig
