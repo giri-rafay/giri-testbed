@@ -8,5 +8,11 @@ spec:
     artifact:
       chartPath:
         name: file://artifacts/cfg/nginx-15.4.2.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
     type: Helm
   namespace: trest1
+  placement:
+    selector: rafay.dev/clusterName=giri-tb-test
+  version: cfg-v1-202503071038390000
