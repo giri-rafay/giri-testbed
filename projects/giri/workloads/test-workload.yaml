@@ -5,6 +5,11 @@ metadata:
   project: giri
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/test-workload/test-workload.yaml
     type: Yaml
   namespace: trest1
+  placement:
+    selector: rafay.dev/clusterName=giri-tb-test
+  version: test-workload-v1-202503071027040000
