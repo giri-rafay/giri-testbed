@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: asipix
+  project: giri
+spec:
+  artifact:
+    artifact:
+      catalog: test
+      chartName: apisix
+      chartVersion: 4.2.0
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
