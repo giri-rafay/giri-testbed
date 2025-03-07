@@ -4,6 +4,28 @@ metadata:
   name: custom
   project: giri
 spec:
+  base:
+    name: gold
+    version: v1
+  componentsCriticality:
+  - name: addon-nginx
+  customAddons:
+  - name: addon-nginx
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator: {}
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
   driftWebhook:
     enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
   type: custom
+  version: v1
+  versionState: active
