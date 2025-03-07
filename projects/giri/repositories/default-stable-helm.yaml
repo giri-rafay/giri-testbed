@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-stable-helm
+  project: giri
+spec:
+  endpoint: https://charts.helm.sh/stable
+  options: {}
+  type: Helm
+status:
+  projects:
+  - projectId: 7w2lnkp
+    repositoryId: 7dkgjkx
+  webhookConfig:
+    webhookSecret: 7c69f4ab910d661cecd32ded4482fc88f9b63b5fafb98e134e86dfc5af3a06bd
+    webhookURL: https://console-giri-test.dev.rafay-edge.net/v2/config/webhook/repository/7dkgjkx

@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    rafay.dev/audit_type: BROWSER||Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+    rafay.dev/audit_user: giridharaprasad@rafay.co
+    rafay.dev/audit_user_group: Organization Admins
+  name: addon-nginx
+  project: giri
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/addon-nginx/nginx-15.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/addon-nginx/values.yaml
+    type: Helm
+  namespace: addon-ns
+  sharing: {}
+  version: v1
+  versionState: active

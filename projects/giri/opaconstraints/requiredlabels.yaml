@@ -1,0 +1,15 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: requiredlabels
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/requiredlabels/ns-label-opa-constraint.yaml
+    options: {}
+    type: Yaml
+  published: true
+  templateName: requiredlabels
+  version: v1

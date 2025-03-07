@@ -1,0 +1,16 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: opa-ip1
+  project: giri
+spec:
+  excludedNamespaces:
+  - namespaces:
+    - name: ns1
+    processes:
+    - '*'
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.16.3
+  version: v1

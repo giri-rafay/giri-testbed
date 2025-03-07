@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-testbed
+  project: giri
+spec:
+  agents:
+  - name: agent1
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-testbed.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/giri-testbed/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: rx28oml
+    name: agent1
+  projects:
+  - projectId: 7w2lnkp
+    repositoryId: 3mx6vmr
+  webhookConfig:
+    webhookSecret: 9e1d00377d5d980d1093dcc2d1b43344118ec7527f390195e5540a21f14fc7d1
+    webhookURL: https://console-giri-test.dev.rafay-edge.net/v2/config/webhook/repository/3mx6vmr

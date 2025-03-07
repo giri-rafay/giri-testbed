@@ -1,0 +1,14 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretStore
+metadata:
+  name: sec1
+  project: giri
+spec:
+  config:
+    vault:
+      clusters:
+      - authPath: /main
+        clusterName: giri-tb-test
+        vaultNamespace: test-ns
+      host: https:giri-test.com
+  provider: Vault

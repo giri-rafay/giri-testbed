@@ -1,0 +1,21 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipeline1
+  project: giri
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      excludedResources:
+      - name: SecretSealer
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        repository: giri-testbed
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync
