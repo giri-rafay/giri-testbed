@@ -4,6 +4,46 @@ metadata:
   name: gold
   project: giri
 spec:
+  base:
+    name: default-aks
+    version: 3.3.0
+  componentsCriticality:
+  - name: opa-policy
+  - name: network-policy
+  costProfile:
+    name: default-cost-profile-aws
+    version: version-1741324329
+  customAddons:
+  - name: addon-xwing
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator: {}
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
   driftWebhook:
     enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: p1
+      version: v1
+    profile:
+      name: in1
+      version: v1
+  opaPolicy:
+    opaPolicy:
+    - name: requiredlabels
+      version: v1
+    profile:
+      name: default
+      version: latest
   type: golden
+  version: v1
+  versionState: active
