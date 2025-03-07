@@ -4,6 +4,7 @@ metadata:
   name: pipeline1
   project: giri
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
